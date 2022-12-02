@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod  # Pod 이름
+spec:
+  containers:  # Pod에 생성할 컨테이너 나열
+    - name: nginx-container  # 컨테이너 이름
+      image: nginx:latest  # 컨테이너 이미지
+      ports:
+      - containerPort: 80
+        protocol: TCP
